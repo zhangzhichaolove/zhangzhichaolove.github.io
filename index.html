@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -83,6 +83,7 @@
 <meta property="og:title" content="个人博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="个人博客">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人博客">
 
@@ -100,7 +101,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -132,7 +133,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -181,7 +182,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
           </a>
         </li>
       
@@ -191,7 +192,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -257,9 +258,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-12T09:53:24+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-12T09:53:24+08:00">
                 2017-10-12
               </time>
             
@@ -319,6 +320,43 @@
 <p>1)如果没有执行者行命令，将会提醒<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">deloyer not found:git</div></pre></td></tr></table></figure></p>
 <p>2)如果出现下面这样的错误，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Permission denied (publickey). </div><div class="line">fatal: Could not read from remote repository. </div><div class="line">Please make sure you have the correct access rights </div><div class="line">and the repository exists.</div></pre></td></tr></table></figure></p>
 <p>则是因为没有设置好public key所致。<br>在本机生成public key,不懂的可以参考我的这一篇博客Git ssh 配置及使用</p>
+<h1 id="主题设定"><a href="#主题设定" class="headerlink" title="主题设定"></a>主题设定</h1><p>选择 Scheme</p>
+<p>Scheme 是 NexT 提供的一种特性，借助于 Scheme，NexT 为你提供多种不同的外观。同时，几乎所有的配置都可以 在 Scheme 之间共用。目前 NexT 支持三种 Scheme，他们是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白</div><div class="line">Mist - Muse 的紧凑版本，整洁有序的单栏外观</div><div class="line">Pisces - 双栏 Scheme，小家碧玉似的清新</div><div class="line">Scheme 的切换通过更改 主题配置文件，搜索 scheme 关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面</div></pre></td></tr></table></figure></p>
+<p>注释 # 即可。</p>
+<p>选择 Pisce Scheme<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#scheme: Muse</div><div class="line">#scheme: Mist</div><div class="line">scheme: Pisces</div></pre></td></tr></table></figure></p>
+<h1 id="设置-语言"><a href="#设置-语言" class="headerlink" title="设置 语言"></a>设置 语言</h1><p>编辑 站点配置文件， 将 language 设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">language: zh-Hans</div></pre></td></tr></table></figure></p>
+<p>目前 NexT 支持的语言如以下表格所示：</p>
+<p>语言    代码    设定实例<br>English    en    language: en<br>简体中文    zh-Hans    language: zh-Hans<br>Français    fr-FR    language: fr-FR<br>Português    pt    language: pt<br>繁體中文    zh-hk 或者 zh-tw    language: zh-hk<br>Русский язык    ru    language: ru<br>Deutsch    de    language: de<br>日本語    ja    language: ja<br>Indonesian    id    language: id</p>
+<h1 id="设置-菜单"><a href="#设置-菜单" class="headerlink" title="设置 菜单"></a>设置 菜单</h1><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。 NexT 使用的是 Font Awesome 提供的图标， Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下 图标模糊的问题。</p>
+<p>编辑 主题配置文件，修改以下内容：</p>
+<p>设定菜单内容，对应的字段是 menu。 菜单内容的设置格式是：item name: link。其中 item name 是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。</p>
+<p>菜单示例配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  archives: /archives</div><div class="line">  #about: /about</div><div class="line">  #categories: /categories</div><div class="line">  tags: /tags</div><div class="line">  #commonweal: /404.html</div></pre></td></tr></table></figure></p>
+<p>若你的站点运行在子目录中，请将链接前缀的 / 去掉</p>
+<p>NexT 默认的菜单项有（标注 的项表示需要手动创建这个页面）：<br>键值    设定值    显示文本（简体中文）<br>home    home: /    主页<br>archives    archives: /archives    归档页<br>categories    categories: /categories    分类页<br>tags    tags: /tags    标签页<br>about    about: /about    关于页面<br>commonweal    commonweal: /404.html    公益 404</p>
+<p>设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用 这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的 languages/{language}.yml （{language} 为你所使用的语言）。</p>
+<p>以简体中文为例，若你需要添加一个菜单项，比如 something。那么就需要修改简体中文对应的翻译文件 languages/zh-Hans.yml，在 menu 字段下添加一项：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: 首页</div><div class="line">  archives: 归档</div><div class="line">  categories: 分类</div><div class="line">  tags: 标签</div><div class="line">  about: 关于</div><div class="line">  search: 搜索</div><div class="line">  commonweal: 公益404</div><div class="line">  something: 有料</div></pre></td></tr></table></figure></p>
+<p>设定菜单项的图标，对应的字段是 menu_icons。 此设定格式是 item name: icon name，其中 item name 与上一步所配置的菜单名字对应，icon name 是 Font Awesome 图标的 名字。而 enable 可用于控制是否显示图标，你可以设置成 false 来去掉图标。</p>
+<p>菜单图标配置示例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">menu_icons:</div><div class="line">  enable: true</div><div class="line">  # Icon Mapping.</div><div class="line">  home: home</div><div class="line">  about: user</div><div class="line">  categories: th</div><div class="line">  tags: tags</div><div class="line">  archives: archive</div><div class="line">  commonweal: heartbeat</div></pre></td></tr></table></figure></p>
+<p>在菜单图标开启的情况下，如果菜单项与菜单未匹配（没有设置或者无效的 Font Awesome 图标名字） 的情况下，NexT 将会使用 作为图标。</p>
+<p>请注意键值（如 home）的大小写要严格匹配</p>
+<h1 id="侧栏"><a href="#侧栏" class="headerlink" title="侧栏"></a>侧栏</h1><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改 主题配置文件 中的 sidebar 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。</p>
+<p>设置侧栏的位置，修改 sidebar.position 的值，支持的选项有：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">left - 靠左放置</div><div class="line">right - 靠右放置</div></pre></td></tr></table></figure></p>
+<p>目前仅 Pisces Scheme 支持 position 配置。影响版本5.0.0及更低版本。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sidebar:</div><div class="line">  position: left</div></pre></td></tr></table></figure></p>
+<p>设置侧栏显示的时机，修改 sidebar.display 的值，支持的选项有：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">post - 默认行为，在文章页面（拥有目录列表）时显示</div><div class="line">always - 在所有页面中都显示</div><div class="line">hide - 在所有页面中都隐藏（可以手动展开）</div><div class="line">remove - 完全移除</div><div class="line">sidebar:</div><div class="line">  display: post</div></pre></td></tr></table></figure></p>
+<p>已知侧栏在 use motion: false 的情况下不会展示。 影响版本5.0.0及更低版本。</p>
+<h1 id="设置-头像"><a href="#设置-头像" class="headerlink" title="设置 头像"></a>设置 头像</h1><p>编辑 站点配置文件， 新增字段 avatar， 值设置成头像的链接地址。其中，头像的链接地址可以是：<br>地址    值<br>完整的互联网 URI    <a href="http://example.com/avtar.png" target="_blank" rel="external">http://example.com/avtar.png</a><br>站点内的地址    将头像放置主题目录下的 source/uploads/ （新建uploads目录若不存在） 配置为：avatar: /uploads/avatar.png 或者 放置在 source/images/ 目录下 , 配置为：avatar: /images/avatar.png<br>头像设置示例</p>
+<p>avatar: <a href="http://example.com/avtar" target="_blank" rel="external">http://example.com/avtar</a>.</p>
+<h1 id="设置-作者昵称"><a href="#设置-作者昵称" class="headerlink" title="设置 作者昵称"></a>设置 作者昵称</h1><p>编辑 站点配置文件， 设置 author 为你的昵称。</p>
+<h1 id="站点描述"><a href="#站点描述" class="headerlink" title="站点描述"></a>站点描述</h1><p>编辑 站点配置文件， 设置</p>
+<p>字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
+<h1 id="添加插件"><a href="#添加插件" class="headerlink" title="添加插件"></a>添加插件</h1><p>添加sitemap和feed插件</p>
+<p>切换到你本地的hexo 目录CIA，在命令行窗口，属兔以下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-feed -save</div><div class="line">npm install hexo-generator-sitemap -save</div></pre></td></tr></table></figure></p>
+<p>修改_config.yml，增加以下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"># Extensions</div><div class="line">Plugins:</div><div class="line">- hexo-generator-feed</div><div class="line">- hexo-generator-sitemap</div><div class="line">#Feed Atom</div><div class="line">feed:</div><div class="line">  type: atom</div><div class="line">  path: atom.xml</div><div class="line">  limit: 20</div><div class="line">#sitemap</div><div class="line">sitemap:</div><div class="line">  path: sitemap.xml</div></pre></td></tr></table></figure></p>
+<p>再执行以下命令，部署服务端<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d -g</div></pre></td></tr></table></figure></p>
+<p>配完之后，就可以访问 <a href="https://XXXXXX.github.io/atom.xml" target="_blank" rel="external">https://XXXXXX.github.io/atom.xml</a> 和 <a href="https://XXXXXX.github.io/sitemap.xml" target="_blank" rel="external">https://XXXXXX.github.io/sitemap.xml</a> ，发现这两个文件已经成功生成了。</p>
+<h1 id="添加404-页面"><a href="#添加404-页面" class="headerlink" title="添加404 页面"></a>添加404 页面</h1><p>GitHub Pages有提供制作404页面的指引：Custom 404 Pages<br>直接在根目录下创建自己的404.html或者404.md就可以。但是自定义404页面仅对绑定顶级域名的项目才起作用，GitHub默认分配的二级域名是不起作用的，使用hexo server在本机调试也是不起作用的。</p>
+<p>推荐使用腾讯公益404(<a href="http://www.qq.com/404/" target="_blank" rel="external">http://www.qq.com/404/</a>)</p>
+<p>我的404页面配置如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">  &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8;&quot;/&gt;</div><div class="line">  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;</div><div class="line">  &lt;meta name=&quot;robots&quot; content=&quot;all&quot; /&gt;</div><div class="line">  &lt;meta name=&quot;robots&quot; content=&quot;index,follow&quot;/&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;https://www.qq.com/404/search_children.js&quot;</div><div class="line">        charset=&quot;utf-8&quot; homePageUrl=&quot;gdutxiaoxu.github.io&quot;</div><div class="line">        homePageName=&quot;回到我的主页&quot;&gt;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
 
           
         
@@ -396,9 +434,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-12T09:41:07+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-12T09:41:07+08:00">
                 2017-10-12
               </time>
             
@@ -529,7 +567,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -581,7 +619,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -589,7 +627,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
 
 
 
