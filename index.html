@@ -228,7 +228,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/12/第一篇博客/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/12/Hexo个人博客搭建/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -247,7 +247,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/10/12/第一篇博客/" itemprop="url">第一篇博客</a></h1>
+                <a class="post-title-link" href="/2017/10/12/Hexo个人博客搭建/" itemprop="url">Hexo个人博客搭建</a></h1>
         
 
         <div class="post-meta">
@@ -299,7 +299,27 @@
       
         
           
-            <h1 id="这是我的第一篇博客。"><a href="#这是我的第一篇博客。" class="headerlink" title="这是我的第一篇博客。"></a>这是我的第一篇博客。</h1>
+            <h1 id="Hexo个人博客搭建"><a href="#Hexo个人博客搭建" class="headerlink" title="Hexo个人博客搭建"></a>Hexo个人博客搭建</h1><h3 id="hexo是一个简单地、轻量地、基于Node的一个静态博客框架，可以方便的生成静态网页托管在github和Heroku上"><a href="#hexo是一个简单地、轻量地、基于Node的一个静态博客框架，可以方便的生成静态网页托管在github和Heroku上" class="headerlink" title="hexo是一个简单地、轻量地、基于Node的一个静态博客框架，可以方便的生成静态网页托管在github和Heroku上"></a>hexo是一个简单地、轻量地、基于Node的一个静态博客框架，可以方便的生成静态网页托管在github和Heroku上</h3><h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><p>第一步，就是下载node的安装包并安装，附上[node下载地址]。(<a href="https://nodejs.org/en/download/" target="_blank" rel="external">https://nodejs.org/en/download/</a>)<br>安装好node，会默认一起安装好npm包管理器，这可是一个神器啊。<br>可以打开终端cmd，执行一下命令确认安装完毕。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">node -v </div><div class="line">npm -version</div></pre></td></tr></table></figure></p>
+<p>另外一个，就是git了。git也没什么好说的，官网下载，选择自己操作系统的版本，一路next就装好了。</p>
+<h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><p>在git终端或者cmd执行安装hexo<br>在自己认为合适的地方创建一个文件夹，这里我以E：/hexo 为例子讲解，首先在E盘目录下创建Hexo文件夹，并在命令行的窗口进入到该目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">npm install hexo --save</div><div class="line">hexo -v</div><div class="line">hexo init</div><div class="line">npm install</div><div class="line">hexo g</div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
+<p>简便语法：hexo s<br>启动本地服务器，在浏览器打开localhost:4000就可以看到效果了。<br>关闭本地服务：ctrl + c</p>
+<h1 id="怎样将Hexo与github-page-联系起来"><a href="#怎样将Hexo与github-page-联系起来" class="headerlink" title="怎样将Hexo与github page 联系起来"></a>怎样将Hexo与github page 联系起来</h1><p>配置Git个人信息</p>
+<p>如果你之前已经配置好git个人信息，请跳过这一个 步骤，直接来到</p>
+<p>1、设置Git的user name和email：(如果是第一次的话)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;xujun&quot;</div><div class="line">git config --global user.email &quot;gdutxiaoxu@163.com&quot;</div></pre></td></tr></table></figure></p>
+<p>2、生成密钥<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;gdutxiaoxu@163.com&quot;</div></pre></td></tr></table></figure></p>
+<p>配置Deployment</p>
+<p>同样在_config.yml文件中，找到Deployment，然后按照如下修改：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:yourname/yourname.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>写博客、发布文章</p>
+<p>新建一篇博客，执行下面的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new post &quot;article title&quot;</div></pre></td></tr></table></figure></p>
+<p>这时候在我的 电脑的目录下 F:\hexo\source\ _posts 将会看到 article title.md 文件</p>
+<p>用MarDown编辑器打开就可以编辑文章了。文章编辑好之后，运行生成、部署命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g   // 生成</div><div class="line">hexo d   // 部署</div></pre></td></tr></table></figure></p>
+<p>当然你也可以执行下面的命令，相当于上面两条命令的效果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d -g #在部署前先生成</div></pre></td></tr></table></figure></p>
+<p>踩坑提醒</p>
+<p>1）注意需要提前安装一个扩展：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>1)如果没有执行者行命令，将会提醒<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">deloyer not found:git</div></pre></td></tr></table></figure></p>
+<p>2)如果出现下面这样的错误，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Permission denied (publickey). </div><div class="line">fatal: Could not read from remote repository. </div><div class="line">Please make sure you have the correct access rights </div><div class="line">and the repository exists.</div></pre></td></tr></table></figure></p>
+<p>则是因为没有设置好public key所致。<br>在本机生成public key,不懂的可以参考我的这一篇博客Git ssh 配置及使用</p>
+
           
         
       
