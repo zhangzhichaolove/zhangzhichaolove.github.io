@@ -28,14 +28,14 @@
 
     <title>peakchao</title>
 
-    <script>
+    <script type="text/javascript">
+
         function addContent(data) {
             let result = data.result
             for (let i = 0; i < result.length; i++) {
                 createRow(result[i])
             }
         }
-
 
         function createRow(result) {
             const editTable = document.getElementById("tbody");
@@ -47,7 +47,8 @@
             const td2 = document.createElement("td");
             td2.innerHTML = result.loginName;
             const td3 = document.createElement("td");
-            td3.innerHTML = result.createdAt;
+            const date = new Date(+new Date(result.createdAt) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '')
+            td3.innerHTML = date;
             tr.appendChild(td0);
             tr.appendChild(td1);
             tr.appendChild(td2);
