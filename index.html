@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="theme-color" content="#222">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
     <link rel="icon" href="images/favicon.png" type="image/x-icon"/>
 
@@ -18,8 +19,58 @@
 
     <meta name="keywords" content="Home"/>
 
+    <style type="text/css">
+        img {
+            border-radius: 25px
+        }
+    </style>
+
 
     <title>peakchao</title>
+
+    <script>
+        function addContent(data) {
+            let result = data.result
+            for (let i = 0; i < result.length; i++) {
+                createRow(result[i])
+            }
+        }
+
+
+        function createRow(result) {
+            const editTable = document.getElementById("tbody");
+            const tr = document.createElement("tr");
+            const td0 = document.createElement("td");
+            td0.innerHTML = "<img src=\"" + result.headerImg + "\" width='50px' height='50px'>";
+            const td1 = document.createElement("td");
+            td1.innerHTML = result.nickName;
+            const td2 = document.createElement("td");
+            td2.innerHTML = result.loginName;
+            const td3 = document.createElement("td");
+            td3.innerHTML = result.createdAt;
+            tr.appendChild(td0);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            editTable.appendChild(tr);
+        }
+
+        function requset() {
+            $.ajax({
+                type: "get",
+                url: "http://47.240.49.105/v1/",
+                async: true,
+                success: function (data) {
+                    addContent(data)
+                    console.log("请求成功:", data)
+                }, error: function (data) {
+                    console.log("请求成功:", data)
+                }
+            });
+        }
+
+        requset()
+    </script>
 
 
 </head>
@@ -28,6 +79,17 @@
 
 <h1 align="center" style="color: crimson">重新开发中，敬请期待！</h1>
 
+<table id="editTable" border="1" width="50%" align="center">
+    <tr align="center">
+        <th>头像</th>
+        <th>昵称</th>
+        <th>账户</th>
+        <th>创建时间</th>
+    </tr>
+    <tbody id="tbody" align="center">
+
+    </tbody>
+</table>
 
 <div align="center">
     <a href="page/home.html">去首页</a>
