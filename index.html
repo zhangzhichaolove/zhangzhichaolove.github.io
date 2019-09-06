@@ -47,8 +47,8 @@
             const td2 = document.createElement("td");
             td2.innerHTML = result.loginName;
             const td3 = document.createElement("td");
-            const date = new Date(+new Date(result.createdAt) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '')
-            td3.innerHTML = date;
+            //const date = new Date(+new Date(result.createdAt) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '')
+            td3.innerHTML = result.createdAt;
             tr.appendChild(td0);
             tr.appendChild(td1);
             tr.appendChild(td2);
