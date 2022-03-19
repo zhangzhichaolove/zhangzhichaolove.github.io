@@ -1,0 +1,1 @@
+import{o as e,c as t,a as o}from"./app.62f6aada.js";import{_ as s}from"./plugin-vue_export-helper.21dcd24c.js";const c={},n={align:"center"},r=o("span",{size:"70"},"GitHub\u9759\u6001\u7F51\u9875\u6258\u7BA1",-1),_=[r];function a(i,d){return e(),t("div",n,_)}var l=s(c,[["render",a]]);export{l as default};
