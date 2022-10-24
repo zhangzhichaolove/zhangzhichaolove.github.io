@@ -1,1 +1,0 @@
-import{o as e,c as t,a as o}from"./app.62f6aada.js";import{_ as s}from"./plugin-vue_export-helper.21dcd24c.js";const c={},a={align:"center"},n=o("span",{size:"70"},"Static hosting web page GitHub",-1),r=[n];function _(i,d){return e(),t("div",a,r)}var p=s(c,[["render",_]]);export{p as default};
