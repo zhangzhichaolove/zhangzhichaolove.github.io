@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as t,V as l}from"./chunks/framework.96b5c143.js";const g=JSON.parse('{"title":"blog-vitepress","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","lastUpdated":1681873327000}'),r={name:"README.md"},i=l("",13),s=[i];function o(n,h,p,c,d,_){return t(),a("div",null,s)}const b=e(r,[["render",o]]);export{g as __pageData,b as default};
